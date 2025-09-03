@@ -1,18 +1,18 @@
 body {
-  background-color: #d4bda4;
+  background-color: #d8cec6f2;
   overflow: hidden;
 }
 .banner {
   height: 100vh;
-
   position: relative;
 }
+
 .banner .product {
   width: 500px;
   height: 4%;
   left: 50%;
   top: 160px;
-  transform: translateX(-45%);
+  transform: translateX(-50%);
   position: absolute;
   z-index: 2;
   transition: 0.7s;
@@ -35,7 +35,7 @@ body {
 
 .banner .product:hover {
   --left: -1000px;
-  transform: translateX(-45%) translateY(-120%);
+  transform: translateX(-50%) translateY(-130%);
 }
 .soda:nth-child(2) {
   opacity: 0;
@@ -62,8 +62,8 @@ body {
   position: absolute;
   height: 130px;
   left: 50%;
-  transform: translateX(-45%);
-  bottom: 5px;
+  transform: translateX(-50%);
+  bottom: -10px;
   transition: 0.7s;
   z-index: 1;
   opacity: 0.9;
@@ -71,7 +71,7 @@ body {
 .rock img:nth-child(2) {
   position: absolute;
   height: 50%;
-  left: 0;
+  left: -10px;
   bottom: 0;
   transition: 0.7s;
   opacity: 0.9;
@@ -85,12 +85,22 @@ body {
   transition: 0.7s;
   opacity: 0.9;
 }
-.banner:has(.product:hover) .rock img:nth-child(1) {
-  transform: translateX(-50%) translateY(50px);
+.product:hover + .rock img:nth-child(1) {
+  transform: translateX(-50%) translateY(5%);
 }
-.banner:has(.product:hover) .rock img:nth-child(2) {
-  transform: translateX(-100px) translateY(100px);
+.product:hover + .rock img:nth-child(2) {
+  transform: translateX(-15%) translateY(10%);
 }
-.banner:has(.product:hover) .rock img:nth-child(3) {
-  transform: translateX(100px) translateY(100px);
+.product:hover + .rock img:nth-child(3) {
+  transform: translateX(15%) translateY(10%);
+}
+.buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  padding: 10px;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 10px;
 }

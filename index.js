@@ -1,22 +1,22 @@
 // goods info
 const drink1 = {
-    id: 1,
-    name: "Iced Latte",
-    category: "Coffee",
-    volumeMl: 350,
-    priceUsd: 4.5,
-    inStock: true,
-    description: "Chilled espresso with milk and ice, smooth and refreshing."
+  id: 1,
+  name: "Iced Latte",
+  category: "Coffee",
+  volumeMl: 350,
+  priceUsd: 4.5,
+  inStock: true,
+  description: "Chilled espresso with milk and ice, smooth and refreshing.",
 };
 
 const drink2 = {
-    id: 2,
-    name: "Green Tea",
-    category: "Tea",
-    volumeMl: 500,
-    priceUsd: 3.0,
-    inStock: false,
-    description: "Traditional brewed green tea, light and aromatic."
+  id: 2,
+  name: "Green Tea",
+  category: "Tea",
+  volumeMl: 500,
+  priceUsd: 3.0,
+  inStock: false,
+  description: "Traditional brewed green tea, light and aromatic.",
 };
 
 // Get the buttons
@@ -26,9 +26,9 @@ const btn2 = document.getElementById("soda2");
 // body and modal room
 const bodyElement = document.body;
 
-const modal = document.createElement('div');
-modal.id = 'modal';
-modal.className = 'modal';
+const modal = document.createElement("div");
+modal.id = "modal";
+modal.className = "modal";
 modal.style.display = "none";
 modal.style.position = "fixed";
 modal.style.top = "20%";
@@ -43,7 +43,7 @@ bodyElement.appendChild(modal);
 
 // helper to render drink info as list
 function renderDrink(drink) {
-    return `
+  return `
         <ul>
             <li><b>ID:</b> ${drink.id}</li>
             <li><b>Name:</b> ${drink.name}</li>
@@ -58,20 +58,20 @@ function renderDrink(drink) {
 }
 
 // Events
-btn1.onclick = function() {
-    modal.innerHTML = renderDrink(drink1);
-    modal.style.display = "block";
+btn1.onclick = function () {
+  modal.innerHTML = renderDrink(drink1);
+  modal.style.display = "block";
 
-    document.getElementById("close-modal").onclick = () => {
-        modal.style.display = "none";
-    };
+  document.getElementById("close-modal").onclick = () => {
+    modal.style.display = "none";
+  };
 };
 
-btn2.onclick = function() {
-    modal.innerHTML = renderDrink(drink2);
-    modal.style.display = "block";
+btn2.onclick = function () {
+  modal.innerHTML = renderDrink(drink2);
+  modal.style.display = "block";
 
-    document.getElementById("close-modal").onclick = () => {
-        modal.style.display = "none";
-    };
+  document.getElementById("close-modal").onclick = () => {
+    modal.style.display = "none";
+  };
 };
