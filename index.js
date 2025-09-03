@@ -30,13 +30,6 @@ const modal = document.createElement("div");
 modal.id = "modal";
 modal.className = "modal";
 modal.style.display = "none";
-modal.style.position = "fixed";
-modal.style.top = "20%";
-modal.style.left = "50%";
-modal.style.transform = "translateX(-50%)";
-modal.style.background = "#fff";
-modal.style.padding = "16px";
-modal.style.border = "1px solid #000";
 modal.style.zIndex = "1000";
 
 bodyElement.appendChild(modal);
