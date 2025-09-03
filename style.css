@@ -9,7 +9,7 @@ body {
 
 .banner .product {
   width: 500px;
-  height: 4%;
+  height: 5%;
   left: 50%;
   top: 160px;
   transform: translateX(-50%);
@@ -23,7 +23,7 @@ body {
   background: var(--url) var(--left) 0, url(./pics/mockup.png);
   background-size: auto 100%;
   aspect-ratio: 2/4;
-  width: 160px;
+  width: 230px;
   background-blend-mode: multiply;
   mask-image: url(./pics/mockup.png);
   mask-size: auto 100%;
