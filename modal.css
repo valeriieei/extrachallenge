@@ -1,0 +1,60 @@
+/* modal.css */
+
+/* dark backdrop */
+.modal {
+
+    display: none; /* hidden by default */
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+
+    /* flex center */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* content box */
+.modal-content {
+    background: #fff;
+    padding: 24px 32px;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    font-family: sans-serif;
+    animation: fadeIn 0.3s ease;
+}
+
+/* list styles */
+.modal-content ul {
+    margin: 0 0 16px 0;
+    padding: 0;
+    list-style: none;
+}
+.modal-content li {
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* close button */
+.modal-content button {
+    background: #222;
+    color: #fff;
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.modal-content button:hover {
+    background: #444;
+}
+
+/* simple fade */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}

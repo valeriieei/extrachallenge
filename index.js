@@ -30,13 +30,6 @@ const modal = document.createElement('div');
 modal.id = 'modal';
 modal.className = 'modal';
 modal.style.display = "none";
-modal.style.position = "fixed";
-modal.style.top = "20%";
-modal.style.left = "50%";
-modal.style.transform = "translateX(-50%)";
-modal.style.background = "#fff";
-modal.style.padding = "16px";
-modal.style.border = "1px solid #000";
 modal.style.zIndex = "1000";
 
 bodyElement.appendChild(modal);
@@ -44,23 +37,25 @@ bodyElement.appendChild(modal);
 // helper to render drink info as list
 function renderDrink(drink) {
     return `
-        <ul>
-            <li><b>ID:</b> ${drink.id}</li>
-            <li><b>Name:</b> ${drink.name}</li>
-            <li><b>Category:</b> ${drink.category}</li>
-            <li><b>Volume:</b> ${drink.volumeMl} ml</li>
-            <li><b>Price:</b> $${drink.priceUsd}</li>
-            <li><b>In stock:</b> ${drink.inStock ? "Yes" : "No"}</li>
-            <li><b>Description:</b> ${drink.description}</li>
-        </ul>
-        <button id="close-modal">Close</button>
+        <div class="modal-content">
+            <ul>
+                <li><b>ID:</b> ${drink.id}</li>
+                <li><b>Name:</b> ${drink.name}</li>
+                <li><b>Category:</b> ${drink.category}</li>
+                <li><b>Volume:</b> ${drink.volumeMl} ml</li>
+                <li><b>Price:</b> $${drink.priceUsd}</li>
+                <li><b>In stock:</b> ${drink.inStock ? "Yes" : "No"}</li>
+                <li><b>Description:</b> ${drink.description}</li>
+            </ul>
+            <button id="close-modal">Close</button>
+        </div>
     `;
 }
 
 // Events
 btn1.onclick = function() {
     modal.innerHTML = renderDrink(drink1);
-    modal.style.display = "block";
+    modal.style.display = "flex";
 
     document.getElementById("close-modal").onclick = () => {
         modal.style.display = "none";
@@ -69,7 +64,7 @@ btn1.onclick = function() {
 
 btn2.onclick = function() {
     modal.innerHTML = renderDrink(drink2);
-    modal.style.display = "block";
+    modal.style.display = "flex";
 
     document.getElementById("close-modal").onclick = () => {
         modal.style.display = "none";
